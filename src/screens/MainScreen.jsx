@@ -21,7 +21,6 @@ const MainScreen = ({ taskList }) => {
   const [taskActive, setTaskActive] = useState({})
 
   const onAddTask = () => {
-      console.log("Se agregó una task");
       setList([
           ...list,
           {
@@ -37,8 +36,6 @@ const MainScreen = ({ taskList }) => {
       setTaskActive(task)
       setModalVisible(!modalVisible)
   }
-
-  console.log(list);
 
   return (
       <View style={styles.container}>

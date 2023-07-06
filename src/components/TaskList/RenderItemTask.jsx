@@ -15,17 +15,16 @@ export default RenderItemTask
 
 const styles = StyleSheet.create({
     task: {
-        width: 200,
-        backgroundColor: "azure",
-        padding: 10,
-        backgroundColor: "mediumpurple",
-        borderRadius: 6,
-        borderColor: "#000",
-        borderBottomWidth: 3,
-        borderRightWidth: 3,
+        width: 300,
+        height: 80,
+        padding: 20,
+        backgroundColor: "#4A55A2",
         marginBottom: 15,
+        justifyContent: 'center',
+        borderRadius: 5,
     },
     taskText: {
-        fontSize: 20,
+        fontSize: 16,
+        color: "white"
     },
 })

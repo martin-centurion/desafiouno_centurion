@@ -17,7 +17,7 @@ const TopBar = ({
             return (
                 <View style={styles.view1}>
                         <TextInput 
-                            placeholder='Add Task'
+                            placeholder='Agregar Tarea'
                             style={styles.input}
                             value={input}
                             onChangeText={setInput}
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap: 20,
         paddingHorizontal: 40,
-        paddingBottom: 50,
+        paddingBottom: 40,
         justifyContent: "center",
         alignItems: "flex-end",
         width: "100%",
@@ -48,11 +48,10 @@ const styles = StyleSheet.create({
     input: {
         width: 250,
         height: 35,
-        borderBottomColor: "#8ecae6",
-        borderBottomWidth: 3,
-        color: "#023047",
-        fontSize: 16,
-        fontWeight: 'bold'
+        borderBottomColor: "#4A55A2",
+        borderBottomWidth: 2,
+        color: "#cccccc",
+        fontSize: 16
     },
     button: {
         height: 35,

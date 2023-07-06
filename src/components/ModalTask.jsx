@@ -29,7 +29,7 @@ const ModalTask = ({
                             style={[styles.button, styles.buttonNotyet]}
                             onPress={() => setModalVisible(!modalVisible)}
                         >
-                            <Text style={styles.textStyle}>Not yet</Text>
+                            <Text style={styles.textStyle}>Delete</Text>
                         </Pressable>
                         <Pressable
                             style={[styles.button, styles.buttonClose]}
@@ -59,32 +59,26 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 35,
         alignItems: "center",
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
+        shadowColor: "#000"
     },
     buttonContainer: {
         flexDirection: "row",
         alignItems: "center",
     },
     button: {
-        borderRadius: 20,
+        borderRadius: 5,
         padding: 10,
+        margin: 10,
         elevation: 2,
     },
-    buttonOpen: {
-        backgroundColor: "#F194FF",
+    buttonClose: {
+        backgroundColor: "#A0BFE0",
     },
     buttonDone: {
-        backgroundColor: "green",
+        backgroundColor: "#4A55A2",
     },
     buttonNotyet: {
-        backgroundColor: "red",
+        backgroundColor: "#7895CB",
     },
     textStyle: {
         color: "white",
@@ -92,6 +86,9 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     modalText: {
+        fontSize: 18,
+        letterSpacing: .5,
+        fontWeight: 'bold',
         marginBottom: 15,
         textAlign: "center",
     },
