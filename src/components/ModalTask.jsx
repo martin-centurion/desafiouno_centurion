@@ -5,6 +5,7 @@ const ModalTask = ({
     modalVisible,
     setModalVisible,
     taskActive,
+    onPressStatus
 }) => {
     return (
         <Modal
@@ -21,13 +22,13 @@ const ModalTask = ({
                     <View style={styles.buttonContainer}>
                         <Pressable
                             style={[styles.button, styles.buttonDone]}
-                            onPress={() => setModalVisible(!modalVisible)}
+                            onPress={() => onPressStatus(true)}
                         >
                             <Text style={styles.textStyle}>Done</Text>
                         </Pressable>
                         <Pressable
                             style={[styles.button, styles.buttonNotyet]}
-                            onPress={() => setModalVisible(!modalVisible)}
+                            onPress={() => onPressStatus(false)}
                         >
                             <Text style={styles.textStyle}>Delete</Text>
                         </Pressable>

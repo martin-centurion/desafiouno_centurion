@@ -4,7 +4,7 @@ import React from 'react'
 const RenderItemTask = ({item, onPressTask}) => {
     return (
         <Pressable onPress={() => onPressTask(item)}>
-            <View style={styles.task} key={item.id}>
+            <View style={ item.completed ? styles.taskCompleted : styles.task} key={item.id}>
                 <Text style={styles.taskText}>{item.task}</Text>
             </View>
         </Pressable>
@@ -22,6 +22,15 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         justifyContent: 'center',
         borderRadius: 5,
+    },
+    taskCompleted: {
+        width: 300,
+        height: 80,
+        padding: 20,
+        backgroundColor: "#27E1C1",
+        marginBottom: 15,
+        justifyContent: 'center',
+        borderRadius: 5
     },
     taskText: {
         fontSize: 16,

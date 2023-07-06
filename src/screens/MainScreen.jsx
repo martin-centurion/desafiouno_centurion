@@ -1,12 +1,6 @@
 import {
   StyleSheet,
-  TextInput,
   View,
-  TouchableOpacity,
-  Text,
-  FlatList,
-  Modal,
-  Pressable
 } from "react-native";             
 import React, { useState } from "react";
 import TaskList from "../components/TaskList";
@@ -32,9 +26,33 @@ const MainScreen = () => {
   }
 
   const onPressTask = (task) => {
-      console.log(task)
       setTaskActive(task)
       setModalVisible(!modalVisible)
+  }
+
+  const onPressStatus = (status) => {
+      const remainTask = list.filter (taskList => taskList.id !== taskActive.id)
+      const orderedList = [
+        ...remainTask,
+        {
+            ...taskActive,
+            completed: status
+        }
+      ].sort(function (a,b) {
+        if (a.id > b.id) {
+            return 1;
+        }
+        if (a.id < b.id) {
+            return -1;
+        }
+        return 0;
+      });
+      setList(orderedList)
+      setModalVisible(!modalVisible)
+  }
+
+  const onPressNotYet = () => {
+    console.log("onPressNotYet");
   }
 
   return (
@@ -52,6 +70,7 @@ const MainScreen = () => {
                 modalVisible={modalVisible}
                 setModalVisible={setModalVisible}
                 taskActive={taskActive}
+                onPressStatus={onPressStatus}
             />
       </View>
   );
