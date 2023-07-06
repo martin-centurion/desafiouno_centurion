@@ -36,7 +36,7 @@ export default TopBar
 
 const styles = StyleSheet.create({
     view1: {
-        height: "20%",
+        minHeight: 200,
         flexDirection: "row",
         gap: 20,
         paddingHorizontal: 40,
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
         height: 35,
         borderBottomColor: "#4A55A2",
         borderBottomWidth: 2,
-        color: "#cccccc",
-        fontSize: 16
+        color: "#4A55A2",
+        fontSize: 18
     },
     button: {
         height: 35,
