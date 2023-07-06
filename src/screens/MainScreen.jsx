@@ -7,15 +7,15 @@ import {
   FlatList,
   Modal,
   Pressable
-} from "react-native";
+} from "react-native";             
 import React, { useState } from "react";
 import TaskList from "../components/TaskList";
 import TopBar from "../components/TopBar";
 import ModalTask from "../components/ModalTask";
 
-const MainScreen = ({ taskList }) => {
+const MainScreen = () => {
 
-  const [list, setList] = useState(taskList)
+  const [list, setList] = useState([])
   const [input, setInput] = useState("")
   const [modalVisible, setModalVisible] = useState(false);
   const [taskActive, setTaskActive] = useState({})
@@ -39,7 +39,7 @@ const MainScreen = ({ taskList }) => {
 
   return (
       <View style={styles.container}>
-          <TopBar
+           <TopBar
                 input={input}
                 onAddTask={onAddTask}
                 setInput={setInput}          
@@ -48,7 +48,6 @@ const MainScreen = ({ taskList }) => {
                 list={list}
                 onPressTask={onPressTask}
             />
-
             <ModalTask
                 modalVisible={modalVisible}
                 setModalVisible={setModalVisible}
